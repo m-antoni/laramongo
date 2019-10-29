@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/mongo', 'MongoDBController@mongoConnect');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
